@@ -5,4 +5,4 @@ const userSchema = new Schema({
   googleId: String
 });
 
-mongoose.model('users', userSchema); //make model witg (name , schema) and load it INTO mongoose // 2 args loads in,
+mongoose.model('users', userSchema); //make model with (name , schema) and load it INTO mongoose // 2 args loads in,

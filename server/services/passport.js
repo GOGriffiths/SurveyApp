@@ -8,7 +8,7 @@ const User = mongoose.model('users'); // load users model out of mongoose
 passport.serializeUser((user, done) => {
   done(null, user.id); //(err, identifying info) // * this is NOT the googleId, but the id asigned to the record by mongo.
 });
-//the googel profile id is only really to make the record, but the record id is what we'll uses as user comes and goes.
+//the google profile id is only really to make the record, but the record id is what we'll uses as user comes and goes.
 
 passport.deserializeUser((id, done) => {
   User.findById(id).then(user => {
