@@ -6,7 +6,10 @@ const keys = require('./config/keys');
 require('./models/User'); // delcare model BEFORE passport tries to use it
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(
+  keys.mongoURI,
+  { useNewUrlParser: true } //temp, to avoid warning
+);
 
 const app = express();
 
